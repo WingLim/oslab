@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/pipe.dir/main.c.o  -o pipe -lpthread 

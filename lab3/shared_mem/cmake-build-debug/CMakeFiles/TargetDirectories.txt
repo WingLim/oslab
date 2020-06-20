@@ -1,0 +1,4 @@
+/mnt/d/dev/oslab/lab3/shared_mem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/dev/oslab/lab3/shared_mem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/dev/oslab/lab3/shared_mem/cmake-build-debug/CMakeFiles/sender.dir
+/mnt/d/dev/oslab/lab3/shared_mem/cmake-build-debug/CMakeFiles/recv.dir

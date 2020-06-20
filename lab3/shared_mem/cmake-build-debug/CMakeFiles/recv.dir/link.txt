@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/recv.dir/recv.c.o  -o recv -lpthread 

@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/dev/oslab/lab3/shared_mem/common.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/stat.h
+-
+sys/shm.h
+-
+sys/ipc.h
+-
+semaphore.h
+-
+fcntl.h
+-
+string.h
+-
+
+/mnt/d/dev/oslab/lab3/shared_mem/sender.c
+common.h
+/mnt/d/dev/oslab/lab3/shared_mem/common.h
+

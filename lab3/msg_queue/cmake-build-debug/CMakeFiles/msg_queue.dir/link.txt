@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/msg_queue.dir/main.c.o  -o msg_queue 

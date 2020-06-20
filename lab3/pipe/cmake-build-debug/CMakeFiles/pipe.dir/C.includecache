@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/dev/oslab/lab3/pipe/main.c
+stdio.h
+-
+pthread.h
+-
+semaphore.h
+-
+unistd.h
+-
+fcntl.h
+-
+sys/wait.h
+-
+stdlib.h
+-
+string.h
+-
+

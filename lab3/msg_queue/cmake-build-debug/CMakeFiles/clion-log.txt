@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/d/dev/oslab/lab3/msg_queue
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/d/dev/oslab/lab3/msg_queue/cmake-build-debug
