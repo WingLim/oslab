@@ -1,3 +1,0 @@
-/mnt/d/dev/oslab/lab5/build/CMakeFiles/rebuild_cache.dir
-/mnt/d/dev/oslab/lab5/build/CMakeFiles/lab5.dir
-/mnt/d/dev/oslab/lab5/build/CMakeFiles/edit_cache.dir
