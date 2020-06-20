@@ -58,9 +58,16 @@ int my_create(char **args) {
 int do_create(const char *parpath, const char *filename) {
     char fullname[NAME_LENGTH], fname[16], exname[8];
     char *token;
+    int flag = 0;
+
     // 在 FAT 表中获取 1 个空闲块
     int first = get_free(1);
-    int flag = 0;
+    // FAT 表中没有空闲块
+    if (first == -1) {
+        printf("create: No more space\n");
+        return -1;
+    }
+    
     fcb *dir = (fcb *) (myvhard + BLOCK_SIZE * find_fcb(parpath)->first);
 
     // 检查父文件夹中是否有空闲的空间
@@ -75,11 +82,7 @@ int do_create(const char *parpath, const char *filename) {
         printf("create: Cannot create more file in %s\n", parpath);
         return -1;
     }
-    // FAT 表中没有空闲块
-    if (first == -1) {
-        printf("create: No more space\n");
-        return -1;
-    }
+
     // 分配 FAT 表
     set_free(first, 1, 0);
 
