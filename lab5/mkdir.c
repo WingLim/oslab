@@ -53,11 +53,6 @@ int my_mkdir(char **args) {
  */
 int do_mkdir(const char *parpath, const char *dirname) {
     int sencond = get_free(1);
-    // FAT表中没有空闲块
-    if (sencond == -1) {
-        printf("mkdir: no more spaces\n");
-        return -1;
-    }
     
     int i, flag = 0, first = find_fcb(parpath)->first;
     fcb *dir = (fcb *) (myvhard + BLOCK_SIZE * first);
@@ -73,7 +68,11 @@ int do_mkdir(const char *parpath, const char *dirname) {
         printf("mkdir: cannot create more file in %s\n", parpath);
         return -1;
     }
-
+    // FAT表中没有空闲块
+    if (sencond == -1) {
+        printf("mkdir: no more spaces\n");
+        return -1;
+    }
     set_free(sencond, 1, 0);
 
     set_fcb(dir, dirname, "di", 0, sencond, BLOCK_SIZE, 1);
