@@ -28,13 +28,10 @@ int startsys(void) {
     fcb_copy(&openfile_list[0].open_fcb, root);
 
     strcpy(openfile_list[0].dir, ROOT);
-    openfile_list[0].dirno = 5;
-    openfile_list[0].diroff = 0;
     openfile_list[0].count = 0;
     openfile_list[0].fcb_state = 0;
     openfile_list[0].free = 1;
-
-    start = ((block0 *) myvhard)->start_block;
+    
     currfd = 0;
     return 0;
 }

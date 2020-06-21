@@ -70,8 +70,6 @@ typedef struct USEROPEN {
     /** FCB */
     fcb open_fcb;
     /** 当前状态 */
-    int dirno;                  //  打开文件的目录项在父目录文件中的盘块号
-    int diroff;                 //  打开文件的目录项在父目录文件的 dirno 盘块中的目录项序号
     char dir[80]; //  打开文件所在的目录名
     int count;                  //  读写指针在文件中的位置
     char fcb_state;             //  是否修改了文件的 FCB 内容
@@ -89,7 +87,6 @@ unsigned char *myvhard;                 // 虚拟磁盘起始地址
 useropen openfile_list[MAX_OPENFILE];   // 用户打开文件表数组
 int currfd;                             // 当前文件指针
 char current_dir[80];                   // 记录当前目录的目录名
-unsigned char *start;                   // 记录虚拟磁盘上数据区开始位置
 unsigned char buffer[DISK_SIZE];
 
 /** 系统内置函数声明 */
