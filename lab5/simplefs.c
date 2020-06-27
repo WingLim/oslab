@@ -33,6 +33,7 @@ int startsys(void) {
     openfile_list[0].free = 1;
     
     currfd = 0;
+    strcpy(current_dir, openfile_list[currfd].dir);
     return 0;
 }
 
