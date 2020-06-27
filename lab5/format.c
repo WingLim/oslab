@@ -43,8 +43,7 @@ void my_format(void) {
     for (int i = 2; i < BLOCK_SIZE * 2 / sizeof(fcb); i++, root++) {
         root->free = 0;
     }
-
-    memset(myvhard + BLOCK_SIZE * 7, 'a', 15);
+    
     // 将上面格式化之后的内容写入到文件
     fp = fopen(FILE_NAME, "w");
     fwrite(myvhard, DISK_SIZE, 1, fp);
