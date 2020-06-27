@@ -46,17 +46,13 @@ int my_rm(char **args) {
                 return 1;
             }
 
-            if (check_open(file, 3)) {
-                return 1;
-            }
+            check_open(file, 2);
             do_rm(file);
             // 递归模式，删除文件夹及其子文件
         } else if (mode == 'r') {
             // 如果为文件则直接删除
             if (file->attribute == 1) {
-                if (check_open(file, 3)) {
-                    return 1;
-                }
+                check_open(file, 2);
                 do_rm(file);
                 // 如果为文件夹，调用 my_rmdir 删除
             } else if (file->attribute == 0) {
@@ -114,9 +110,7 @@ int my_rmdir(char **args) {
             printf("rmdir: cannot remove '%s': Is a directory\n", args[i]);
         }
 
-        if (check_open(dir, 4)) {
-            return 1;
-        }
+        check_open(dir, 2);
         do_rmdir(dir);
     }
     return 1;

@@ -373,15 +373,9 @@ int check_open(fcb *file, char mode) {
                 case 1: // 打开文件
                     printf("open: cannot open '%s': File or folder is opened\n", file->filename);
                     continue;
-                case 2: // 关闭文件
+                case 2: // 关闭文件、删除文件、删除文件夹
                     do_close(j);
                     break;
-                case 3: // 删除文件
-                    printf("rm: cannot remove '%s': File is opened\n", file->filename);
-                    return 1;
-                case 4: // 删除文件夹
-                    printf("rmdir: cannot remove '%s': File is opened\n", file->filename);
-                    return 1;
             }
 
         }
