@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/lab5_3.dir/main.c.o CMakeFiles/lab5_3.dir/simplefs.c.o  -o lab5_3 
